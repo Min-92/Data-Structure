@@ -38,22 +38,12 @@ public class Array1 {
 			System.out.println(numbers1[i]);
 		}
 		
+		//배열의 장점이자 단점
+		//크기가 정해져있다.
+		//기능이 없다.
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		//작고 가볍고 단순하다
+				
 	}
 
 }
