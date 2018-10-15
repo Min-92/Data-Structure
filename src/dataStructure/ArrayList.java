@@ -23,7 +23,79 @@ public class ArrayList {
 		return true;
 	}
 	
-	public Ob
+	public String toString() {
+		String str = "[";
+		for(int i = 0; i < size; i++) {
+			str += elementData[i];
+			if(i < size-1) {
+				str += ",";
+			}
+		}
+		return str + "]";
+		
+	}
+
+	public Object remove(int index) {
+		Object removed = elementData[index];
+		for (int i = index; i <= size -2; i++) {
+			elementData[i] = elementData[i+1];
+		}
+		elementData[size] = null;
+		size--;
+		return removed;
+	}
+	
+	public Object get(int index) {
+		return elementData[index];
+	}
+	
+	public int size() {
+		return size;
+	}
+	
+	public  int indexOf(Object o) {
+		for(int i = 0; i <size; i++) {
+			if(o.equals(elementData[i])) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	public ListIterator listIterator() {
+		return new ListIterator();
+	}
+	 
+	public class ListIterator{
+		private int nextIndex = 0;
+
+		public Object next() {
+			return elementData[nextIndex++];
+		}
+		
+		public boolean hasNext() {
+			return nextIndex < size();
+		}
+	
+		public Object previous() {
+			return elementData[--nextIndex];
+		}
+		
+		public boolean hasPrevious() {
+			return nextIndex > 0;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
 	
 	
 	
